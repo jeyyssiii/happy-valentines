@@ -43,7 +43,7 @@
             position: absolute;
             width: 20px;
             height: 20px;
-            background-image: url("heart.png"); /* Replace with your heart image */
+            background-image: url("images.jpeg"); /* Replace with your heart image */
             background-size: cover;
             animation: fall 5s linear infinite; /* Adjust duration as needed */
         }
@@ -81,7 +81,7 @@
 
 <div id="container">
   <div id="password-container">
-      Enter Anniversary Date (DDMM): <input type="password" id="password">
+      Enter Anniversary Date (DD/MM): <input type="password" id="password">
       <button onclick="checkPassword()">Enter</button>
   </div>
 
@@ -99,7 +99,7 @@
 
 
 <script>
-    const password = "0101"; // Replace with your anniversary date (DDMM)
+    const password = "11/24"; // Replace with your anniversary date (DDMM)
     const passwordContainer = document.getElementById("password-container");
     const questionContainer = document.getElementById("question-container");
     const heartsContainer = document.getElementById("hearts-container");
