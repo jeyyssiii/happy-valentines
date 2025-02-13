@@ -56,7 +56,7 @@
         #content-container {
             display: none; /* Initially hidden */
             text-align: center;
-            z-index: 0; /* Place content above hearts */
+            z-index: 1; /* Place content above hearts */
         }
 
         #cat-gif {
@@ -78,10 +78,10 @@
     </style>
 </head>
 <body>
-  
+
 <div id="container">
   <div id="password-container">
-      Enter Anniversary Date (DDMM): <input type="password" id="password">
+      Enter Anniversary Date (DD/MM): <input type="password" id="password">
       <button onclick="checkPassword()">Enter</button>
   </div>
 
@@ -95,10 +95,11 @@
 <div id="hearts-container"></div>
 
 <div id="content-container">
-    <img id="flower" src="tulips-clipped.png" alt="tulips for my beloved !!">
-    <img id="cat-gif" src="cat-silly.gif" alt="yippie yippie yippie !!">
-    <img id="chocolates" src="ferrero-clipped.png" alt="chocolate to go with your tulips, ofc">
+    <img id="flower" src="tulips-clipped.png" alt="tulips for my beloved">
+    <img id="cat-gif" src="cat-silly.gif" alt="yippie yippie yippie">   
+    <img id="chocolates" src="ferrero-clipped.png" alt="Chocolates to go with your tulips love"> 
 </div>
+
 
 <script>
     const password = "11/11"; // Replace with your anniversary date (DDMM)
