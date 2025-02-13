@@ -6,14 +6,14 @@
     <title>Happy Valentine's Day!</title>
     <style>
         body {
-            background-color: #f7cac9; /* Light pink background */
-            overflow: hidden; /* Prevent scrollbars */
+            background-color: #f7cac9;
+            overflow: hidden;
             margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh; /* Ensure full viewport height */
+            min-height: 100vh;
         }
 
         #container {
@@ -25,7 +25,7 @@
         }
 
         #question-container {
-            display: none; /* Initially hidden */
+            display: none;
             margin-bottom: 20px;
         }
 
@@ -35,17 +35,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none; /* Allow clicks to pass through */
-            z-index: 1; /* Place hearts above other content */
+            pointer-events: none; /* Crucial for overlapping */
+            z-index: 2; /* Hearts above content */
         }
 
         .heart {
             position: absolute;
             width: 20px;
             height: 20px;
-            background-image: url("heart.png"); /* Replace with your heart image */
+            background-image: url("heart.png");
             background-size: cover;
-            animation: fall 5s linear infinite; /* Adjust duration as needed */
+            animation: fall 5s linear infinite;
         }
 
         @keyframes fall {
@@ -54,34 +54,34 @@
         }
 
         #content-container {
-            display: none; /* Initially hidden */
+            display: none;
             text-align: center;
-            z-index: 2; /* Place content above hearts */
-        }
-
-        #cat-gif {
-            max-width: 300px;
-            margin-bottom: 20px;
+            z-index: 1; /* Content below hearts */
+            display: flex; /* Use flexbox for horizontal arrangement */
+            align-items: center; /* Vertically align items */
+            justify-content: center; /* Horizontally align items */
         }
 
         #flower {
             max-width: 150px;
-            margin-right: 20px; /* Space between flower and chocolates */
-            display: inline-block; /* Allow horizontal arrangement */
+            margin-right: 20px;
+        }
+
+        #cat-gif {
+            max-width: 300px;
+            margin: 0 20px; /* Add margin on both sides */
         }
 
         #chocolates {
             max-width: 150px;
-            display: inline-block; /* Allow horizontal arrangement */
         }
-
     </style>
 </head>
 <body>
 
 <div id="container">
   <div id="password-container">
-      Enter Anniversary Date (DD/MM): <input type="password" id="password">
+      Enter Anniversary Date (DDMM): <input type="password" id="password">
       <button onclick="checkPassword()">Enter</button>
   </div>
 
@@ -95,7 +95,11 @@
 <div id="hearts-container"></div>
 
 <div id="content-container">
-    <img id="flower" src="tulips-clipped.png" alt="tulips for my beloved"> <img id="cat-gif" src="cat-silly.gif" alt="YIPPIE YIPPIE YIPPIE"> <img id="chocolates" src="ferrero-clipped.png" alt="chocolates to go with them ofc"> </div>
+    <img id="flower" src="tulips-clipped.png" alt="tulips for my beloved">
+    <img id="cat-gif" src="cat-silly.gif" alt="YIPPIE YIPPIE YIPPIE !!">
+    <img id="chocolates" src="ferrero-clipped.png" alt="chocolate to go with your tulips, ofc">
+</div>
+        
 
 
 <script>
